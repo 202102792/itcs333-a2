@@ -8,3 +8,8 @@ $response = file_get_contents($url);
 
 // Convert the JSON response into a PHP array
 $data = json_decode($response, true);
+
+// Check if the data is valid and has results
+if(!$data || !isset($data["results"])) {
+    die("Error fetching the data from the API"); // Stop the code if something went wrong
+}
