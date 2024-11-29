@@ -5,3 +5,6 @@ $url = "https://data.gov.bh/api/explore/v2.1/catalog/datasets/01-statistics-of-s
 
 // Get the data from the API
 $response = file_get_contents($url);
+
+// Convert the JSON response into a PHP array
+$data = json_decode($response, true);
