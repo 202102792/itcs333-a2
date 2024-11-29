@@ -13,3 +13,8 @@ $data = json_decode($response, true);
 if(!$data || !isset($data["results"])) {
     die("Error fetching the data from the API"); // Stop the code if something went wrong
 }
+
+// Save the results part of the data into a variable
+$result = $data['results'];
+
+?>
